@@ -35,7 +35,7 @@ const login = async (req, res) => {
 
 const getProfile = async (req, res) => {
     try {
-        const id = req.body.id;
+        const id = req.userData.id;
         const user = await userService.getUserById(id);
         if (user) {
             res.send({
