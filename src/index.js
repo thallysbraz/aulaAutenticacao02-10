@@ -7,7 +7,7 @@ const app = express();
 
 app.use(cors());
 app.use(express.json());
-const port = 3000;
+const port = 8080;
 
 app.post("/register", userController.register);
 app.post("/login", userController.login);
