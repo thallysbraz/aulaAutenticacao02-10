@@ -1,4 +1,3 @@
-// src/services/userService.js
 const userRepository = require('../repository/userRepository');
 const bcrypt = require('bcrypt');
 
@@ -28,7 +27,7 @@ async function authenticateUser(email, password) {
 }
 
 async function getUserById(id) {
-
+    return userRepository.findUserById(id);
 }
 
 module.exports = {
